@@ -11,8 +11,8 @@ public class Main {
                 stk.push(str.charAt(i));
             }
             if (str.charAt(i) == ')') {
-                if(stk.isEmpty()){
-                    return true;
+                if (stk.isEmpty()) {
+                    return false;
                 }
                 stk.pop();
             }
@@ -28,7 +28,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String str = "(()))";
+        String str = "()))";
         boolean ans = isbalanced(str);
         System.out.println(ans);
 

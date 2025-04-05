@@ -497,4 +497,28 @@ public static void insertionSort(int[] arr) {
     }
 
 
------------------------------------------------
+----------------------------------------------- Balanced Paranthesis------------------------------------
+public static boolean isbalanced(String str) {
+        Stack<Character> stk = new Stack<>();
+        int i = 0;
+        while (i < str.length()) {
+            if (str.charAt(i) == '(') {
+                stk.push(str.charAt(i));
+            }
+            if (str.charAt(i) == ')') {
+                if (stk.isEmpty()) {
+                    return false;
+                }
+                stk.pop();
+            }
+            i++;
+
+        }
+
+        if (stk.isEmpty()) {
+            return true;
+        }
+
+        return false;
+    }
+-------------------------------------------------------------
