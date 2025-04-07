@@ -533,4 +533,16 @@ public static void pp(int n) {
         System.out.print(n + " ");
 
     }
---------------------------------------------------------------
+--------------------------------------------------------------write a program to print all natural number from n to 1;--------------
+  public static void pp(int n) {
+
+        // base case
+        if (n < 1) {
+
+            return;
+        }
+        System.out.print(n + " ");
+        pp(n - 1);
+
+    }
+-------------------------------------------------------  

@@ -3,17 +3,17 @@ import java.util.Iterator;
 import java.util.Stack;
 
 public class Main {
-    // write a program to print all natural number from 1 to n;
+    // write a program to print all natural number from n to 1;
 
     public static void pp(int n) {
-        
+
         // base case
-        if (n <1) {
+        if (n < 1) {
 
             return;
         }
-        pp(n-1);
-        System.out.print(n+" ");
+        System.out.print(n + " ");
+        pp(n - 1);
 
     }
 
