@@ -521,4 +521,16 @@ public static boolean isbalanced(String str) {
 
         return false;
     }
--------------------------------------------------------------
+------------------------------------------------------------- Write a program to print n natural number from 1 to n using recursion;
+public static void pp(int n) {
+
+        // base case
+        if (n < 1) {
+
+            return;
+        }
+        pp(n - 1);
+        System.out.print(n + " ");
+
+    }
+--------------------------------------------------------------

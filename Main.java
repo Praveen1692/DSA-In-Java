@@ -3,34 +3,24 @@ import java.util.Iterator;
 import java.util.Stack;
 
 public class Main {
-    public static boolean isbalanced(String str) {
-        Stack<Character> stk = new Stack<>();
-        int i = 0;
-        while (i < str.length()) {
-            if (str.charAt(i) == '(') {
-                stk.push(str.charAt(i));
-            }
-            if (str.charAt(i) == ')') {
-                if (stk.isEmpty()) {
-                    return false;
-                }
-                stk.pop();
-            }
-            i++;
+    // write a program to print all natural number from 1 to n;
 
+    public static void pp(int n) {
+        
+        // base case
+        if (n <1) {
+
+            return;
         }
+        pp(n-1);
+        System.out.print(n+" ");
 
-        if (stk.isEmpty()) {
-            return true;
-        }
-
-        return false;
     }
 
     public static void main(String[] args) {
-        String str = "))((";
-        boolean ans = isbalanced(str);
-        System.out.println(ans);
+
+        int n = 10;
+        pp(n);
 
     }
 }
