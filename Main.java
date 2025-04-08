@@ -5,10 +5,13 @@ import java.util.Stack;
 public class Main {
     // write a program to print all natural number from n to 1;
 
-    public static int secondLargest(int[] arr){
-        Arrays.sort(arr);
-        return arr[arr.length-2];
-    }
+    
+
+
+      
+
+
+    
 
 
     
