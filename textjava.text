@@ -562,4 +562,16 @@ static int fact(int n) {
         return fib(n - 1) + fib(n - 2);
 
     }
----------------------------------------------------l 
+---------------------------------------------------Power of two number-----------------------
+ public static int power(int a, int b) {
+        if (a == 1) {
+            return b;
+
+        }
+        if (b == 1) {
+            return a;
+        }
+        return a * power(a, b - 1);
+
+    }
+--------------------------------------------
