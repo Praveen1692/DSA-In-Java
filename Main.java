@@ -3,22 +3,24 @@ import java.util.Iterator;
 import java.util.Stack;
 
 public class Main {
-    // given an integer , find out the sum of its digits using recursion;
-    static int sumOfDigits(int n) {
+    // given a number num and a value k, print k multiples of num;
+    public static void multiples(int num, int k) {
         // base case
-        if (n == 0 || n == 1) {
-            return n;
+        if (k == 1) {
+            System.out.print(num * k + " ");
+            return;
+
         }
-        int sumOfStartindDigit = n / 10;
-        int lastDigit = n % 10;
-        return sumOfDigits(sumOfStartindDigit) + lastDigit;
+        multiples(num, k - 1);
+        int finaal = num * k;
+        System.out.print(finaal + " ");
 
     }
 
     public static void main(String[] args) {
 
-        int n = 1234;
-        System.out.println(sumOfDigits(n));
-
+        int num = 3;
+        int k = 8;
+        multiples(num, k);
     }
 }
