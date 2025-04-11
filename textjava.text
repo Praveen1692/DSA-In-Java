@@ -585,4 +585,15 @@ static int fact(int n) {
         int result=power(a, b/2);
         return result*result;
     }
-------------------------------------------------------
+------------------------------------------------------ SUm of n digits-------------------------
+ static int sumOfDigits(int n) {
+        // base case
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        int sumOfStartindDigit = n / 10;
+        int lastDigit = n % 10;
+        return sumOfDigits(sumOfStartindDigit) + lastDigit;
+
+    }
+---------------------------------------------------------
