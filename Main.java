@@ -4,23 +4,28 @@ import java.util.Stack;
 
 public class Main {
 
-    // print the sum of the element  of the array;
-    public static int sum(int[] arr, int idx) {
-        if (idx == arr.length - 1) {
-            return arr[idx];
+    static class LLNode {
+        int data;
+        LLNode next;
+
+        public LLNode(int d) {
+            data = d;
+            next = null;
         }
-
-        int ans = sum(arr, idx + 1);
-     
-        return ans+arr[idx];
-
     }
 
     public static void main(String[] args) {
 
-        int[] arr = { 5, 40, 2, 3, 100, 5 };
-        int idx = 0;
-        System.out.println(sum(arr, idx));
+        LLNode l1 = new LLNode(100);
+        LLNode l2 = new LLNode(200);
+        LLNode l3 = new LLNode(400);
+        LLNode l4 = new LLNode(500);
+        LLNode l5 = new LLNode(300);
+
+        l1.next = l2;
+        l2.next = l3;
+        l3.next = l4;
+        l4.next = l5;
 
     }
 }
