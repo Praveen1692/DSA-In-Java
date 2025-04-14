@@ -649,4 +649,15 @@ public static int GCD(int a,int b){
         System.out.print(arr[idx] + " ");
         print(arr, idx + 1);
     }
------------------------------------------------------------------
+-----------------------------------------------------------------print the max value of the array;-----------------------------
+ public static int print(int[] arr, int idx) {
+        if (idx == arr.length - 1) {
+            return arr[idx];
+        }
+
+        int ans = print(arr, idx + 1);
+     
+        return Math.max(ans, arr[idx]);
+
+    }
+------------------------------------------------------------------------------
