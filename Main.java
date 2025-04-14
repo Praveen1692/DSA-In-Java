@@ -4,15 +4,15 @@ import java.util.Stack;
 
 public class Main {
 
-    // print the max value of the array;
-    public static int print(int[] arr, int idx) {
+    // print the sum of the element  of the array;
+    public static int sum(int[] arr, int idx) {
         if (idx == arr.length - 1) {
             return arr[idx];
         }
 
-        int ans = print(arr, idx + 1);
+        int ans = sum(arr, idx + 1);
      
-        return Math.max(ans, arr[idx]);
+        return ans+arr[idx];
 
     }
 
@@ -20,7 +20,7 @@ public class Main {
 
         int[] arr = { 5, 40, 2, 3, 100, 5 };
         int idx = 0;
-        System.out.println(print(arr, idx));
+        System.out.println(sum(arr, idx));
 
     }
 }
