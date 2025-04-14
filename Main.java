@@ -4,27 +4,23 @@ import java.util.Stack;
 
 public class Main {
 
-    public static int GCD(int a,int b){
-        if(a==0){
-            return b;
-        }
-        if(b==0){
-            return a;
-        }
-        if(a>b){
-            return GCD(a-b, b);
-        }else{
-            return GCD(a, b-a);
-        }
+   // print the array recurively;
+   public static void print(int[] arr,int idx){
+    if(idx==arr.length-1){
+        System.out.print(arr[idx]+ " ");
+        return;
     }
+    System.out.print(arr[idx]+ " ");
+    print(arr, idx+1);
+   }
 
     
 
     public static void main(String[] args) {
 
-        int a=4;
-        int b=9;
-        System.out.println(GCD(a, b));
+        int[] arr={5,4,2,3,1,5};
+        int idx=0;
+        print(arr, idx);
        
 
     }
