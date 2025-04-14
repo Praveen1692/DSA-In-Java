@@ -14,6 +14,16 @@ public class Main {
         }
     }
 
+    static void displayLL(LLNode head){
+        LLNode temp=head;
+        while (temp!=null) 
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+            
+        }
+    }
+
     public static void main(String[] args) {
 
         LLNode l1 = new LLNode(100);
@@ -26,6 +36,10 @@ public class Main {
         l2.next = l3;
         l3.next = l4;
         l4.next = l5;
+
+        System.out.println("SLL is created");
+        displayLL(l1);
+
 
     }
 }
