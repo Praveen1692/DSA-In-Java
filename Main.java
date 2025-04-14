@@ -4,27 +4,28 @@ import java.util.Stack;
 
 public class Main {
 
-    // given a number n. find the sum of natural numbers till n but with alternate singns;
-
-    static int alternateSign(int n) {
-
-        // base case
-        if (n == 1) {
-            return n;
-
+    public static int GCD(int a,int b){
+        if(a==0){
+            return b;
         }
-        if (n % 2 == 0) {
-            return alternateSign(n - 1) - n;
-
-        } else {
-            return alternateSign(n - 1) + n;
+        if(b==0){
+            return a;
+        }
+        if(a>b){
+            return GCD(a-b, b);
+        }else{
+            return GCD(a, b-a);
         }
     }
 
+    
+
     public static void main(String[] args) {
 
-        int num = 10;
-        System.out.println(alternateSign(num));
+        int a=4;
+        int b=9;
+        System.out.println(GCD(a, b));
+       
 
     }
 }
