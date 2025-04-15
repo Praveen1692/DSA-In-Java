@@ -4,31 +4,28 @@ import java.util.Stack;
 
 public class Main {
 
-    static boolean isPresent(int[] arr,int idx,int x){
-        if(idx>=arr.length){
-            return false;
+    static void isPresent(int[] arr, int idx, int x) {
+        if (idx >= arr.length) {
+            System.out.println("-1");
+            return;
 
         }
-        if(arr[idx]==x){
-            return true;
+        if (arr[idx] == x) {
+            System.out.print(idx + " ");
+            return;
         }
-        return isPresent(arr, idx+1, x);
+        isPresent(arr, idx + 1, x);
 
     }
-
-   
 
     public static void main(String[] args) {
 
         System.out.println("Hello World");
 
-        int[] arr={1,2,4,7,9,10,5,0,60};
-        int idx=0;
-        int x=600;
-        System.out.println(isPresent(arr, idx, x));
-
-      
-
+        int[] arr = { 1, 2, 4, 7, 9, 10, 5, 0, 60 };
+        int idx = 0;
+        int x = 90;
+        isPresent(arr, idx, x);
 
     }
 }
