@@ -729,4 +729,16 @@ static int countNode(LLNode head){
         }
         return count;
     }
------------------------------------------------------------
+----------------------------------------------------------- Linear search using recursion-------------------------------------------------------
+static boolean isPresent(int[] arr,int idx,int x){
+        if(idx>=arr.length){
+            return false;
+
+        }
+        if(arr[idx]==x){
+            return true;
+        }
+        return isPresent(arr, idx+1, x);
+
+    }
+----------------------------------------------------------------------------------
