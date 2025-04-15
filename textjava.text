@@ -718,4 +718,15 @@ public class Main {
 
     }
 }
--------------------------------------------------------
+------------------------------------------------------- Count Node of Single LInked List--------------------------
+static int countNode(LLNode head){
+        LLNode temp=head;
+        int count=0;
+        while (temp!=null) {
+            count++;
+            temp=temp.next;
+            
+        }
+        return count;
+    }
+-----------------------------------------------------------

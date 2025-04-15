@@ -24,6 +24,17 @@ public class Main {
         }
     }
 
+    static int countNode(LLNode head){
+        LLNode temp=head;
+        int count=0;
+        while (temp!=null) {
+            count++;
+            temp=temp.next;
+            
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
 
         LLNode l1 = new LLNode(100);
@@ -39,6 +50,8 @@ public class Main {
 
         System.out.println("SLL is created");
         displayLL(l1);
+        int count=countNode(l1);
+        System.out.println(count);
 
 
     }
