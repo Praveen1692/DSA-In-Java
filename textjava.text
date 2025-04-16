@@ -741,4 +741,14 @@ static boolean isPresent(int[] arr,int idx,int x){
         return isPresent(arr, idx+1, x);
 
     }
-----------------------------------------------------------------------------------
+------------------------------------------------------Remove all Occurence of a in a String--------------------
+ static String Remove(String str, int idx, int n) {
+        if (idx >= n) {
+            return "";
+        }
+        if (str.charAt(idx) == 'a') {
+            return Remove(str, idx + 1, n);
+        }
+        return str.charAt(idx) + Remove(str, idx + 1, n);
+    }
+--------------------------------------------------------
