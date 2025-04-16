@@ -751,4 +751,14 @@ static boolean isPresent(int[] arr,int idx,int x){
         }
         return str.charAt(idx) + Remove(str, idx + 1, n);
     }
---------------------------------------------------------
+-------------------------------------------------------- Reverse a string using recursion------------------
+ static String Remove(String str, int idx, int n) {
+        if (idx >= n) {
+            return "";
+        }
+        char first = str.charAt(idx);
+
+        return Remove(str, idx + 1, n) + first;
+
+    }
+*-------------------------------------------------------------

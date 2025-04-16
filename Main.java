@@ -9,15 +9,18 @@ public class Main {
         if (idx >= n) {
             return "";
         }
-        if (str.charAt(idx) == 'a') {
-            return Remove(str, idx + 1, n);
-        }
-        return str.charAt(idx) + Remove(str, idx + 1, n);
+        char first=str.charAt(idx);
+
+        return Remove(str,idx+1,n)+first;
+
+
+
+      
     }
     public static void main(String[] args) {
 
         System.out.println("Hello World");
-        String str = "abacax";
+        String str = "praveen";
         int n = str.length();
         int idx = 0;
         System.out.println(Remove(str, idx, n));
