@@ -12,7 +12,7 @@ public class Main {
         }
         if (arr[idx] == x) {
             System.out.print(idx + " ");
-            return;
+            
         }
         isPresent(arr, idx + 1, x);
 
@@ -22,9 +22,9 @@ public class Main {
 
         System.out.println("Hello World");
 
-        int[] arr = { 1, 2, 4, 7, 9, 10, 5, 0, 60 };
+        int[] arr = { 1, 2, 4, 7, 9, 10, 7, 0, 7 };
         int idx = 0;
-        int x = 90;
+        int x = 7;
         isPresent(arr, idx, x);
 
     }
