@@ -15,8 +15,12 @@ public class Main {
             return;
         }
 
-        //recursive call
-
+        // recursive call-->
+        // 1-include
+        printSequence(arr, idx + 1, tempArr);
+        tempArr.add(arr[idx]);
+        // 2- do not include;
+        printSequence(arr, idx + 1, tempArr);
 
     }
 
