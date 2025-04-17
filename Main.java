@@ -9,7 +9,7 @@ public class Main {
         // base case
         if (idx == arr.length) {
             if (tempArr.size() > 0) {
-                System.out.println(tempArr);
+                System.out.print(tempArr+" ");
 
             }
             return;
@@ -22,13 +22,16 @@ public class Main {
         // 2- do not include;
         printSequence(arr, idx + 1, tempArr);
 
+        // remove last value;
+        tempArr.remove(tempArr.size() - 1);
+
     }
 
     public static void main(String[] args) {
 
-        System.out.println("Hello World");
-        int n = 3;
-        System.out.println(tilingProblem(n));
+      int[] arr={1,2};
+      int idx=0;
+      printSequence(arr, idx, new ArrayList<>() );
 
     }
 }

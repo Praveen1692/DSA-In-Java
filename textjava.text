@@ -768,4 +768,26 @@ static int tilingProblem(int n) {
         }
         return tilingProblem(n - 1) + tilingProblem(n - 2);
     }
-------------------------------------------------------------
+------------------------------------------------------------ Print All Sequence of A array or string-----------------------
+static void printSequence(int[] arr, int idx, ArrayList<Integer> tempArr) {
+        // base case
+        if (idx == arr.length) {
+            if (tempArr.size() > 0) {
+                System.out.print(tempArr+" ");
+
+            }
+            return;
+        }
+
+        // recursive call-->
+        // 1-include
+        printSequence(arr, idx + 1, tempArr);
+        tempArr.add(arr[idx]);
+        // 2- do not include;
+        printSequence(arr, idx + 1, tempArr);
+
+        // remove last value;
+        tempArr.remove(tempArr.size() - 1);
+
+    }
+-----------------------------------------------------------------------
