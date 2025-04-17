@@ -761,4 +761,11 @@ static boolean isPresent(int[] arr,int idx,int x){
         return Remove(str, idx + 1, n) + first;
 
     }
-*-------------------------------------------------------------
+*------------------------------------------------------------- Tiling Problem in backtring---------------
+static int tilingProblem(int n) {
+        if (n <= 3) {
+            return n;
+        }
+        return tilingProblem(n - 1) + tilingProblem(n - 2);
+    }
+------------------------------------------------------------

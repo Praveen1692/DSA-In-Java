@@ -5,25 +5,18 @@ import java.util.Stack;
 
 public class Main {
 
-    static String Remove(String str, int idx, int n) {
-        if (idx >= n) {
-            return "";
+    static int tilingProblem(int n) {
+        if (n <= 3) {
+            return n;
         }
-        char first=str.charAt(idx);
-
-        return Remove(str,idx+1,n)+first;
-
-
-
-      
+        return tilingProblem(n - 1) + tilingProblem(n - 2);
     }
+
     public static void main(String[] args) {
 
         System.out.println("Hello World");
-        String str = "praveen";
-        int n = str.length();
-        int idx = 0;
-        System.out.println(Remove(str, idx, n));
+        int n = 3;
+        System.out.println(tilingProblem(n));
 
     }
 }
