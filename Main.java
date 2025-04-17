@@ -5,11 +5,19 @@ import java.util.Stack;
 
 public class Main {
 
-    static int tilingProblem(int n) {
-        if (n <= 3) {
-            return n;
+    static void printSequence(int[] arr, int idx, ArrayList<Integer> tempArr) {
+        // base case
+        if (idx == arr.length) {
+            if (tempArr.size() > 0) {
+                System.out.println(tempArr);
+
+            }
+            return;
         }
-        return tilingProblem(n - 1) + tilingProblem(n - 2);
+
+        //recursive call
+
+
     }
 
     public static void main(String[] args) {
