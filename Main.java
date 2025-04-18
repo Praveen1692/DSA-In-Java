@@ -31,9 +31,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String str="ABC";
-        int l=0;
-        int r=str.length()-1;
+        String str = "ABC";
+        int l = 0;
+        int r = str.length() - 1;
 
         permute(str, l, r);
 
