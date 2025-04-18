@@ -5,26 +5,15 @@ import java.util.Stack;
 
 public class Main {
 
-    static void printSequence(int[] arr, int idx, ArrayList<Integer> tempArr) {
-        // base case
-        if (idx == arr.length) {
-            if (tempArr.size() > 0) {
-                System.out.print(tempArr+" ");
+    static void permute(String str,int l,int r){
 
-            }
-            return;
-        }
-
-        // recursive call-->
-        // 1-include
-        printSequence(arr, idx + 1, tempArr);
-        tempArr.add(arr[idx]);
-        // 2- do not include;
-        printSequence(arr, idx + 1, tempArr);
-
-        // remove last value;
-        tempArr.remove(tempArr.size() - 1);
-
+    }
+    static String swap(String str,int i,int j){
+        char[] charArray=str.toCharArray();
+        char temp=charArray[i];
+        charArray[i]=charArray[j];
+        charArray[j]=temp;
+        
     }
 
     public static void main(String[] args) {
