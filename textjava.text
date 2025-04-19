@@ -814,4 +814,21 @@ static void permute(String str, int l, int r) {
 
         return String.valueOf(charArray);
     }
---------------------------------------------------------------------------
+-------------------------------------------------------------------------- For Jump On Stone Problem-----------------
+static int fog(int[] arr, int n,int idx){
+        if(idx==n-1){
+            return 0;
+
+        }
+       
+        int first=Math.abs(arr[idx]-arr[idx+1])+fog(arr, n, idx+1);
+
+        if(idx==n-2){
+            return first;
+        }
+        int second=Math.abs(arr[idx]-arr[idx+2])+fog(arr, n, idx+2);
+
+        
+        return Math.min(first, second);
+    }
+------------------------------------------------------
