@@ -31,7 +31,7 @@ public class Main {
         int[] arr={10,30,40,20};
         int n=arr.length;
         int idx=0;
-        int ans=0;
+       
         System.out.println(fog(arr, n, idx));
 
        
