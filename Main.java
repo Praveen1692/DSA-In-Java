@@ -5,37 +5,25 @@ import java.util.Stack;
 
 public class Main {
 
-    static int fog(int[] arr, int n,int idx){
-        if(idx==n-1){
-            return 0;
+    static void keyPairCombination(String dig, String[] kp, String res) {
+        if (dig.length() == 0) {
+            System.out.print(res + " ");
+            return;
+        }
+        int currNum = dig.charAt(0) - '0';
+        String currChoices = kp[currNum];
+        for (int i = 0; i < currChoices.length(); i++) {
+            keyPairCombination(dig.substring(1), kp, res + currChoices.charAt(i));
 
         }
-       
-        int first=Math.abs(arr[idx]-arr[idx+1])+fog(arr, n, idx+1);
-
-        if(idx==n-2){
-            return first;
-        }
-        int second=Math.abs(arr[idx]-arr[idx+2])+fog(arr, n, idx+2);
-
-        
-        return Math.min(first, second);
     }
-
-    
 
     public static void main(String[] args) {
 
-        
         System.out.println("Hello");
-        int[] arr={10,30,40,20};
-        int n=arr.length;
-        int idx=0;
-       
-        System.out.println(fog(arr, n, idx));
-
-       
-        
+        String digit = "253";
+        String[] kp = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+        keyPairCombination(digit, kp, "");
 
     }
 }
