@@ -22,9 +22,7 @@ public class Main {
 
         int[] arr = { 0, 5, 0, 3, 4, 2 };
         int[][] arre={{1,2,3},{7,8,9,4,5,6}};
-       // swap(arr);
-       // System.out.println(Arrays.toString(arr));
-        System.out.println(Arrays.deepToString(arre));
+      
 
     }
 }
