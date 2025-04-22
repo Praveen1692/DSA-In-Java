@@ -5,23 +5,16 @@ import java.util.Stack;
 
 public class Main {
 
-    static void swap(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length-i-1; j++) {
-                if (arr[j] == 0 && arr[j + 1] != 0) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
+    static void countSort(int[] arr) {
 
-            }
-        }
     }
 
     public static void main(String[] args) {
 
-       System.out.println("Hello");
-      
+        System.out.println("Hello");
+        int[] arr = { 10, 50, 90, 70, 60, 40 };
+        countSort(arr);
+        System.out.println(Arrays.toString(arr));
 
     }
 }
