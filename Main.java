@@ -67,5 +67,6 @@ public class Main {
         deleteAtPos(2);
 
         print(); // Output: 100 200 300
+        System.out.println("Hello World");
     }
 }
