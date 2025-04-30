@@ -1,39 +1,20 @@
 public class Main {
-    static boolean isPalindrome(String str) {
-        int left = 0;
-        int right = str.length() - 1;
-
-        while (left < right) {
-            if (str.charAt(left) == str.charAt(right)) {
-                left++;
-                right--;
-            } else {
-                return false;
-            }
+    static int searchInRotatedArray(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end) {
 
         }
-        return true;
 
-    }
 
-    static void subString(String str) {
-        for (int i = 0; i < str.length(); i++) {
-            String substr = "";
-            for (int j = i; j < str.length(); j++) {
-                substr += str.charAt(j);
-                boolean check = isPalindrome(substr);
-                if (check == true) {
-                    System.out.println("Yes palindrome " + substr);
-                    return;
-                }
-            }
-        }
-        System.out.println("no palindrome");
+        return -1;
+
     }
 
     public static void main(String[] args) {
         System.out.println("Hello");
-        String str = "eru";
-        subString(str);
+        int[] arr = { 3, 4, 5, 1, 2 };
+        int target = 4;
+        System.out.println(searchInRotatedArray(arr,target));
     }
 }
